@@ -1,0 +1,355 @@
+/* ポートフォリオ最小版 v1 — カラフル差し色バリエーション
+   地と文字は配色Aと同じ。差し色だけを作品・セクションごとに変え、
+   「柔軟な発想」を色の多様さで表す案。色数が多い分、使う場所は
+   カテゴリ表示とカード上端の帯だけに限定している。 */
+
+:root {
+  color-scheme: light;
+  --bg: #FAFAF6;
+  --surface: #FFFFFF;
+  --text: #1E2A32;
+  --muted: #5A6B76;
+  --accent: #0E7C86;
+  --c-teal: #0E7C86;
+  --c-amber: #E8A33D;
+  --c-coral: #E4572E;
+  --c-violet: #7C6BD9;
+  --c-green: #4C9F70;
+  --c-pink: #D96C85;
+  --line: #DCE3E0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ヘッダー */
+.site-header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.brand-id {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* レイアウト */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 35px 0 80px;
+}
+
+/* ヒーロー */
+.hero {
+  padding: 88px 0 100px;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 1.15;
+  margin: 16px 0 4px;
+}
+
+.hero-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.hero-lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.primary-link {
+  display: inline-block;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 700;
+}
+
+/* 作品 */
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-size: 2.3rem;
+  margin: 0 0 30px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project:nth-child(1) {
+  border-top-color: var(--c-teal);
+}
+
+.project:nth-child(2) {
+  border-top-color: var(--c-amber);
+}
+
+.project:nth-child(3) {
+  border-top-color: var(--c-violet);
+}
+
+.project:nth-child(1) .category {
+  color: var(--c-teal);
+}
+
+.project:nth-child(2) .category {
+  color: #B57A17;
+}
+
+.project:nth-child(3) .category {
+  color: var(--c-violet);
+}
+
+#skills .eyebrow {
+  color: var(--c-green);
+}
+
+#about .eyebrow {
+  color: var(--c-coral);
+}
+
+#contact .eyebrow {
+  color: var(--c-pink);
+}
+
+.category {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.project p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.project p strong {
+  color: var(--text);
+}
+
+.state {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.projects-sub {
+  margin-top: 36px;
+}
+
+.sub-heading {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+.projects-sub ul {
+  color: var(--muted);
+  padding-left: 1.2em;
+}
+
+.projects-sub strong {
+  color: var(--text);
+}
+
+/* スキル */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.skill-group h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.skill-group p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* About / Contact */
+.about {
+  border-top: 1px solid var(--line);
+  max-width: 760px;
+}
+
+.about p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.contact {
+  border-top: 1px solid var(--line);
+}
+
+.contact p {
+  color: var(--muted);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 6px 0;
+}
+
+/* フッター */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 30px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* スマホ */
+@media (max-width: 650px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 56px 0 64px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 22px;
+  }
+}
+
+
+/* Integration: comparison navigation, future image space, and narrow-screen safety.
+   Approved colors, typography, layout rules and copy above remain unchanged. */
+.palette-switch {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+  gap: 16px;
+}
+.palette-switch a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.project-image-slot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+body { overflow-wrap: anywhere; }
+.site-header > *, .hero-links > * { min-width: 0; }
+.hero-links { flex-wrap: wrap; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

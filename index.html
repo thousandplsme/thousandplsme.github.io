@@ -3,21 +3,129 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="thousandplsmeのゲーム開発・XR・AI制作ポートフォリオ">
-  <title>thousandplsme | Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="きむら（thousandplsme）のポートフォリオ。ゲームプログラマー志望の学生による、ゲーム開発・AR・AIの制作記録。">
+  <meta property="og:title" content="きむら | ゲームプログラマー志望">
+  <meta property="og:description" content="限られた時間の中で試行錯誤し、発想と工夫で作る。ゲーム開発・AR・AIの制作記録。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thousandplsme.github.io/">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="canonical" href="https://thousandplsme.github.io/">
+  <title>きむら | ゲームプログラマー志望</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header"><a class="brand" href="#top">thousandplsme</a><nav aria-label="メインナビゲーション"><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/thousandplsme">GitHub ↗</a></nav></header>
+  <header class="site-header">
+    <!-- Future logo: add an approved logo inside the brand link. -->
+    <a class="brand" href="#top">きむら <span class="brand-id">/ thousandplsme</span></a>
+    <nav aria-label="メインナビゲーション">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/thousandplsme">GitHub ↗</a>
+    </nav>
+  </header>
+
+
+  <nav class="palette-switch" aria-label="配色を比較">
+    <a href="index.html" aria-current="page">本線版（配色A）</a>
+    <a href="colorful.html">カラフル版</a>
+  </nav>
+
   <main id="top">
-    <section class="hero"><p class="eyebrow">GAME DEVELOPMENT · XR · AI</p><h1>技術とアイデアを、<br>体験に変える。</h1><p>Unity / C#を中心に、ゲーム開発、XR、AIを活用した制作に取り組んでいます。</p><a class="primary-link" href="#projects">作品を見る ↓</a></section>
-    <section id="projects" class="section"><div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Projects</h2></div><div class="projects">
-      <article class="project"><span class="category">Unity · C# · Team</span><h3>Graduation Project</h3><p>TPS視点の3Dアクションゲーム。チームリーダーとして企画・仕様判断、Unity統合、進行管理を担当。</p><span class="state">開発中 · 非公開</span></article>
-      <article class="project"><span class="category">Python · MediaPipe · Streamlit</span><h3>DXfes</h3><p>顔の向きや姿勢などから集中状態の推定を試みたチーム制作。</p><span class="state">ハッカソン2位 · 非公開</span></article>
-      <article class="project"><span class="category">Unity · C# · AR</span><h3>和歌山イルミ</h3><p>地域のイルミネーションを題材にしたARフォトカメラ。企画・仕様設計、実装、発表を担当。</p><span class="state">校内コンペ1位</span><a href="https://github.com/thousandplsme/AR_illumination">GitHubで見る ↗</a></article>
-      <article class="project"><span class="category">Python · Streamlit · Gemini</span><h3>Report Assistant AI Tool</h3><p>指導報告書の作成を支援するAIツール。実際の業務で使用した経験があります。</p><span class="state">業務利用経験 · 非公開</span></article>
-      <article class="project"><span class="category">Python · Discord · Google Sheets</span><h3>しんちょくん</h3><p>卒業制作チームの進捗・タスク・日程調整を支援するDiscord Bot。</p><span class="state">運用終了 · 非公開</span></article>
-    </div></section>
-    <section id="about" class="section about"><p class="eyebrow">ABOUT</p><h2>開発と学習</h2><p>ゲーム開発・XR・Human–Computer Interactionに関心があります。制作ではAIを調査・実装補助・検証に活用し、仕様やユーザー体験の判断は人間が行うことを重視しています。</p></section>
-  </main><footer>© 2026 thousandplsme · <a href="https://github.com/thousandplsme">GitHub</a></footer>
-</body></html>
+    <section class="hero">
+      <p class="eyebrow">GAME PROGRAMMER ASPIRANT</p>
+      <h1>きむら</h1>
+      <p class="hero-role">ゲームプログラマー志望</p>
+      <p class="hero-lead">IT系専門学校と通信制大学（心理学）に在籍しながら、ゲーム開発とAIを学んでいます。限られた時間の中で試行錯誤し、発想と工夫で作ることを大切にしています。</p>
+      <p class="hero-links">
+        <a class="primary-link" href="#projects">作品を見る ↓</a>
+        <a class="text-link" href="https://github.com/thousandplsme">GitHub ↗</a>
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Unity · C# · Team</span>
+          <h3>卒業制作：大阪城3Dアクションゲーム</h3>
+          <p>大阪城を舞台にした3Dアクションゲーム。4人チームで、リーダー兼プログラマー兼ディレクターを担当しています。</p>
+          <span class="state">開発中 · 非公開</span>
+        </article>
+
+        <article class="project">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Unity · C# · AR</span>
+          <h3>Wakayama AR Photo</h3>
+          <p>和歌山・けやき大通りのイルミネーションを題材にしたARフォトアプリ。5人チームで企画・仕様設計、AR撮影機能の実装、進行管理、発表を担当しました。</p>
+          <p><strong>発想のきっかけ：</strong>大阪・御堂筋のイルミネーションは「写真撮影→SNS投稿→拡散→来訪」の流れが自然に生まれています。対してけやき大通りは、点灯していても人通りがほぼありません。せめて写真撮影やSNS映えだけでも生み出せないか、と考えました。</p>
+          <p><strong>工夫：</strong>限られた時間では「木を読み込むと3Dオブジェクトが出現」「位置情報でオブジェクトが変わる」といった機能は実装できませんでした。代わりにマーカーにイラストを採用し、将来は企業や周辺飲食店のロゴを読み取ると装飾が足されるような、拡張の余地を残しました。</p>
+          <span class="state">校内コンペ1位</span>
+          <a href="https://github.com/thousandplsme/AR_illumination">GitHubで見る ↗</a>
+        </article>
+
+        <article class="project">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Python · MediaPipe</span>
+          <h3>AttenCheck</h3>
+          <p>顔の向きや姿勢などから集中状態の推定を試みたチーム制作。顔検知とAIモデルを担当しました。</p>
+          <span class="state">4時間ハッカソン2位</span>
+        </article>
+      </div>
+
+      <div class="projects-sub">
+        <h3 class="sub-heading">その他の制作</h3>
+        <ul>
+          <li><strong>Report Assistant AI Tool</strong>（Python · Streamlit · Gemini）：指導報告書の作成を支援するAIツール。実際の業務で使用した経験があります。</li>
+          <li><strong>しんちょくん</strong>（Python · Discord · Google Sheets）：卒業制作チームの進捗・タスク・日程調整を支援するDiscord Bot（運用終了）。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">SKILLS</p>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>制作で使用</h3>
+          <p>Unity / C#、Python（MediaPipe、Streamlit）</p>
+        </div>
+        <div class="skill-group">
+          <h3>学習中</h3>
+          <p>C、C++、ゲーム数学（ベクトル・行列）。自力で書ける力をつけることを目標に学習しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <p class="eyebrow">ABOUT</p>
+      <h2>わたしについて</h2>
+      <p>ゲーム開発・XRと、心理学と情報学のあいだにある領域に関心があります。学ぶことが好きで、興味を持ったことをとことん掘り下げるタイプです。</p>
+      <p>制作ではAIを調査・実装補助・検証に活用し、仕様やユーザー体験の判断は自分で行うことを重視しています。Unity講習会の講師経験もあります。</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Contact</h2>
+      <p>お問い合わせはメールでお願いします。Xは準備中です。</p>
+      <ul class="contact-list">
+        <li>Mail：準備中</li>
+        <li>GitHub：<a href="https://github.com/thousandplsme">github.com/thousandplsme ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2026 きむら（thousandplsme）</footer>
+</body>
+</html>
