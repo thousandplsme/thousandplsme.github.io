@@ -1,0 +1,148 @@
+:root {
+  color-scheme: light;
+  --bg: #FAFAF6;
+  --text: #1E2A32;
+  --muted: #5A6B76;
+  --line: #DCE3E0;
+  --accent: #0E7C86;
+  --surface: #FFFFFF;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.lab-header, main { width: min(100% - 36px, 760px); margin-inline: auto; }
+.lab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding-block: 24px;
+}
+.lab-header h1 { margin: 0; font-size: 1.65rem; line-height: 1.35; }
+.hero-role { margin: 0; color: var(--muted); }
+a { color: var(--accent); text-underline-offset: .2em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.scene {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.scene svg { display: block; width: 100%; height: auto; }
+.object {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 160ms ease-out, filter 160ms ease-out;
+}
+.surface { fill: var(--bg); }
+.lamp-light { fill: var(--accent); stroke: none; opacity: 0; transition: opacity 160ms ease-out; }
+.scene:has(.spot-lamp[aria-pressed="true"]) .lamp-light { opacity: .16; }
+.scene:has(.spot-lamp[aria-pressed="true"]) .lamp-shade { fill: var(--accent); }
+button { font: inherit; cursor: pointer; }
+.spot {
+  position: absolute;
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: .875rem;
+  font-weight: 650;
+  width: 46%;
+  left: 2%;
+  height: 46%;
+  top: 2%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.spot-shelf, .spot-lamp { left: 52%; }
+.spot-notebook, .spot-lamp { top: 52%; }
+.spot[aria-expanded="true"], .spot[aria-pressed="true"] { border-color: var(--accent); }
+.scene:has(.spot-desk:focus-visible) .object-desk,
+.scene:has(.spot-shelf:focus-visible) .object-shelf,
+.scene:has(.spot-notebook:focus-visible) .object-notebook { stroke-width: 4; }
+@media (hover: hover) and (pointer: fine) {
+  .scene:has(.spot-desk:hover) .object-desk,
+  .scene:has(.spot-shelf:hover) .object-shelf,
+  .scene:has(.spot-notebook:hover) .object-notebook {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 4px var(--accent));
+  }
+}
+@container (max-width: 400px) {
+  .spot { line-height: 1.35; }
+}
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 14px; }
+.actions button {
+  min-height: 44px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  background: var(--surface);
+}
+.actions button[aria-expanded="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: underline;
+}
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 16px clamp(16px, 4vw, 24px);
+}
+.panel:not([hidden]) { animation: panel-in 160ms ease-out both; }
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.panel h2, .projects-section h2 { margin: 0; font-size: 1.5rem; }
+.panel p { margin-block: 8px; }
+.projects-section { padding-block: 32px 48px; }
+.eyebrow, .category { color: var(--accent); font-size: .8rem; font-weight: 700; }
+.eyebrow { margin: 0; letter-spacing: .14em; }
+.projects { display: grid; gap: 14px; margin-top: 14px; }
+.project {
+  padding: clamp(16px, 4vw, 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 12px;
+  background: var(--surface);
+  scroll-margin-top: 16px;
+}
+.project-image-slot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+.project h3, .project p { margin: 0; }
+.project p, .state { color: var(--muted); }
+.project strong { color: var(--text); }
+.state { font-size: .85rem; font-weight: 700; }
+@media (prefers-reduced-motion: reduce) {
+  .object, .lamp-light { transition: none; }
+  .scene .object { transform: none !important; }
+  .panel:not([hidden]) { animation: none; }
+}

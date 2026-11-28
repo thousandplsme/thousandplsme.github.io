@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>きむら | 研究室</title>
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+  <header class="lab-header">
+    <div>
+      <h1>きむら</h1>
+      <p class="hero-role">ゲームプログラマー志望</p>
+    </div>
+    <a href="index.html">本線版（配色A）</a>
+  </header>
+  <main>
+    <div class="scene">
+      <svg viewBox="0 0 640 344" aria-hidden="true" focusable="false">
+        <g class="object object-desk">
+          <path class="surface" d="M112 93h96v18h-96z"/>
+          <path d="M121 111v28m78-28v28"/>
+        </g>
+        <g class="object object-shelf">
+          <rect class="surface" x="449" y="78" width="62" height="62" rx="2"/>
+          <path d="M449 109h62m-50 0V88h10v21m11 0V92h13v17m-33 31v-20h27v20"/>
+        </g>
+        <g class="object object-notebook">
+          <path class="surface" d="M115 254q23-10 45 0 22-10 45 0v42q-23-9-45 0-22-9-45 0z"/>
+          <path d="M160 254v42m-34-32 22 2m-22 9 22 2m24-11 22-2m-22 13 22-2"/>
+        </g>
+        <g class="object object-lamp">
+          <path class="lamp-light" d="m462 273-18 25h72l-18-25z"/>
+          <path class="surface lamp-shade" d="m469 250-12 23h46l-12-23z"/>
+          <path d="M480 273v22m-16 0h32"/>
+        </g>
+      </svg>
+      <button class="spot spot-desk" type="button" aria-controls="record" aria-expanded="false">実験机</button>
+      <button class="spot spot-shelf" type="button" aria-controls="works" aria-expanded="false">作品棚</button>
+      <button class="spot spot-notebook" type="button" aria-controls="about" aria-expanded="false">研究ノート</button>
+      <button class="spot spot-lamp" type="button" aria-pressed="false">ランプ</button>
+    </div>
+
+    <div class="actions" role="group" aria-label="研究室の案内">
+      <button type="button" aria-controls="record" aria-expanded="false">制作記録</button>
+      <button type="button" aria-controls="works" aria-expanded="false">作品</button>
+      <button type="button" aria-controls="about" aria-expanded="false">制作者について</button>
+    </div>
+
+    <section class="panel" id="record" aria-labelledby="record-title" hidden>
+      <h2 id="record-title">Wakayama AR Photo</h2>
+      <p><strong>発想のきっかけ：</strong>大阪・御堂筋のイルミネーションは「写真撮影→SNS投稿→拡散→来訪」の流れが自然に生まれています。対してけやき大通りは、点灯していても人通りがほぼありません。せめて写真撮影やSNS映えだけでも生み出せないか、と考えました。</p>
+      <p><strong>工夫：</strong>限られた時間では「木を読み込むと3Dオブジェクトが出現」「位置情報でオブジェクトが変わる」といった機能は実装できませんでした。代わりにマーカーにイラストを採用し、将来は企業や周辺飲食店のロゴを読み取ると装飾が足されるような、拡張の余地を残しました。</p>
+    </section>
+    <section class="panel" id="works" aria-labelledby="works-title" hidden>
+      <h2 id="works-title">Projects</h2>
+      <ul>
+        <li><a href="#project-1">卒業制作：大阪城3Dアクションゲーム</a></li>
+        <li><a href="#project-2">Wakayama AR Photo</a></li>
+        <li><a href="#project-3">AttenCheck</a></li>
+      </ul>
+    </section>
+    <section class="panel" id="about" aria-labelledby="about-title" hidden>
+      <p class="eyebrow">ABOUT</p>
+      <h2 id="about-title">わたしについて</h2>
+      <p>ゲーム開発・XRと、心理学と情報学のあいだにある領域に関心があります。学ぶことが好きで、興味を持ったことをとことん掘り下げるタイプです。</p>
+      <p>制作ではAIを調査・実装補助・検証に活用し、仕様やユーザー体験の判断は自分で行うことを重視しています。Unity講習会の講師経験もあります。</p>
+    </section>
+
+    <section class="projects-section" aria-labelledby="projects-title">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2 id="projects-title">Projects</h2>
+      <div class="projects">
+        <article class="project" id="project-1">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Unity · C# · Team</span>
+          <h3>卒業制作：大阪城3Dアクションゲーム</h3>
+          <p>大阪城を舞台にした3Dアクションゲーム。4人チームで、リーダー兼プログラマー兼ディレクターを担当しています。</p>
+          <span class="state">開発中 · 非公開</span>
+        </article>
+
+        <article class="project" id="project-2">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Unity · C# · AR</span>
+          <h3>Wakayama AR Photo</h3>
+          <p>和歌山・けやき大通りのイルミネーションを題材にしたARフォトアプリ。5人チームで企画・仕様設計、AR撮影機能の実装、進行管理、発表を担当しました。</p>
+          <p><strong>発想のきっかけ：</strong>大阪・御堂筋のイルミネーションは「写真撮影→SNS投稿→拡散→来訪」の流れが自然に生まれています。対してけやき大通りは、点灯していても人通りがほぼありません。せめて写真撮影やSNS映えだけでも生み出せないか、と考えました。</p>
+          <p><strong>工夫：</strong>限られた時間では「木を読み込むと3Dオブジェクトが出現」「位置情報でオブジェクトが変わる」といった機能は実装できませんでした。代わりにマーカーにイラストを採用し、将来は企業や周辺飲食店のロゴを読み取ると装飾が足されるような、拡張の余地を残しました。</p>
+          <span class="state">校内コンペ1位</span>
+          <a href="https://github.com/thousandplsme/AR_illumination">GitHubで見る ↗</a>
+        </article>
+
+        <article class="project" id="project-3">
+          <!-- Future project image: replace this empty space with the approved image. -->
+          <div class="project-image-slot" aria-hidden="true"></div>
+          <span class="category">Python · MediaPipe</span>
+          <h3>AttenCheck</h3>
+          <p>顔の向きや姿勢などから集中状態の推定を試みたチーム制作。顔検知とAIモデルを担当しました。</p>
+          <span class="state">4時間ハッカソン2位</span>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script>
+    const panelButtons = [...document.querySelectorAll('button[aria-controls]')];
+    const panels = document.querySelectorAll('.panel');
+    for (const button of panelButtons) {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('aria-controls');
+        const opening = button.getAttribute('aria-expanded') === 'false';
+        for (const panel of panels) {
+          panel.hidden = !opening || panel.id !== target;
+        }
+        for (const control of panelButtons) {
+          control.setAttribute('aria-expanded',
+            String(opening && control.getAttribute('aria-controls') === target));
+        }
+      });
+    }
+
+    const lamp = document.querySelector('.spot-lamp');
+    lamp.addEventListener('click', () => {
+      const lit = lamp.getAttribute('aria-pressed') === 'true';
+      lamp.setAttribute('aria-pressed', String(!lit));
+    });
+  </script>
+</body>
+</html>
